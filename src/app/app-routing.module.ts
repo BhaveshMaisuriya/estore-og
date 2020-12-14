@@ -12,9 +12,9 @@ const routes: Routes = [
       seo: {
         title: 'Home Page | Dynamic Title and Meta Tags Demo',
         metaTags: [
-          { name: 'description', content: 'Game of Thrones Quotes : Winter is Coming, You know nothing Jon Snow, Never forget what you are. The rest of the world will not. Wear it like armour, and it can never be used to hurt you' },
+          { name: 'description', content: 'Game of Thrones Quotes.' },
           { property: 'og:title', content: 'Hey Bhavesh! You have Done.. ⚔' },
-          { proprety: 'og:description', content: 'Game of Thrones Quotes : Winter is Coming, You know nothing Jon Snow, Never forget what you are. The rest of the world will not. Wear it like armour, and it can never be used to hurt you' },
+          { proprety: 'og:description', content: 'Game of Thrones Quotes : Winter is Coming.' },
           { property: 'og:image', content: environment.appUrl + 'assets/image/homepage.png' },
           { property: 'og:url', content: environment.appUrl + 'home' },
           { name: "twitter:card", content: "summary_large_image" },
@@ -48,7 +48,7 @@ const routes: Routes = [
         metaTags: [
           { name: 'description', content: 'List of all Game of Thrones books. A Game of Thrones, Clash of Kings, A Storm of Swords...' },
           { property: 'og:title', content: 'Game of Thrones Books 📕' },
-          { proprety: 'og:description', content: 'List of all Game of Thrones books. A Game of Thrones, Clash of Kings, A Storm of Swords, The Hedge Knight, A Feast for Crows' },
+          { proprety: 'og:description', content: 'List of all Game of Thrones books. A Game of Thrones, Clash of Kings.' },
           { property: 'og:image', content: environment.appUrl + 'assets/image/books.png' },
           { property: 'og:url', content: environment.appUrl + 'books' },
           { name: "twitter:card", content: "summary_large_image" },
