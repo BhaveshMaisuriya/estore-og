@@ -48,7 +48,7 @@ const routes: Routes = [
         metaTags: [
           { name: 'description', content: 'List of all Game of Thrones books. A Game of Thrones, Clash of Kings, A Storm of Swords...' },
           { property: 'og:title', content: 'Game of Thrones Books 📕' },
-          { proprety: 'og:description', content: 'List of all Game of Thrones books. A Game of Thrones, Clash of Kings.' },
+          { proprety: 'og:description', content: 'List of all Game of Thrones books.' },
           { property: 'og:image', content: environment.appUrl + 'assets/image/books.png' },
           { property: 'og:url', content: environment.appUrl + 'books' },
           { name: "twitter:card", content: "summary_large_image" },
