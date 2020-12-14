@@ -13,7 +13,7 @@ const routes: Routes = [
         title: 'Home Page | Dynamic Title and Meta Tags Demo',
         metaTags: [
           { name: 'description', content: 'Game of Thrones Quotes : Winter is Coming, You know nothing Jon Snow, Never forget what you are. The rest of the world will not. Wear it like armour, and it can never be used to hurt you' },
-          { property: 'og:title', content: 'GOT Home Page ⚔' },
+          { property: 'og:title', content: 'Hey Bhavesh! You have Done.. ⚔' },
           { proprety: 'og:description', content: 'Game of Thrones Quotes : Winter is Coming, You know nothing Jon Snow, Never forget what you are. The rest of the world will not. Wear it like armour, and it can never be used to hurt you' },
           { property: 'og:image', content: environment.appUrl + 'assets/image/homepage.png' },
           { property: 'og:url', content: environment.appUrl + 'home' },
@@ -30,7 +30,7 @@ const routes: Routes = [
         title: 'GOT Characters 🧔',
         metaTags: [
           { name: 'description', content: 'List of all the characters from game of thrones' },
-          { property: 'og:title', content: 'GOT Characters 🧔' },
+          { property: 'og:title', content: 'Hey Bhavesh ! 🧔' },
           { proprety: 'og:description', content: 'List of all the characters from game of thrones' },
           { property: 'og:image', content: environment.appUrl + 'assets/image/characters.png' },
           { property: 'og:url', content: environment.appUrl + 'characters' },
