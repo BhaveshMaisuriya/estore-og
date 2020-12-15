@@ -1,4 +1,5 @@
 export const environment = {
   production: true,
-  appUrl: 'https://celcom.herokuapp.com/'
+  //appUrl: 'http://localhost:4000'
+  appUrl: 'https://celcom.herokuapp.com'
 };

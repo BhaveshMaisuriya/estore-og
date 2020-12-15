@@ -1,0 +1,25 @@
+[
+    {
+        "seo": {
+            "title": "Home | Dynamic Title and Meta Tags Demo",
+            "metaTags": [
+                {
+                    "property": "og:title",
+                    "content": "Books | Celcom"
+                },
+                {
+                    "proprety": "og:description",
+                    "content": "Cool! You have done the OG."
+                },
+                {
+                    "property": "og:image",
+                    "content": "https://celcom.herokuapp.com/assets/image/books.png"
+                },
+                {
+                    "property": "og:url",
+                    "content": "https://celcom.herokuapp.com/books"
+                }
+            ]
+        }
+    }
+]

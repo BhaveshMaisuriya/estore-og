@@ -1,0 +1,25 @@
+[
+    {
+        "seo": {
+            "title": "Plan Mega | Dynamic Title and Meta Tags Demo",
+            "metaTags": [
+                {
+                    "property": "og:title",
+                    "content": "Characters | Celcom"
+                },
+                {
+                    "proprety": "og:description",
+                    "content": "Cool! You have done the OG."
+                },
+                {
+                    "property": "og:image",
+                    "content": "https://celcom.herokuapp.com/assets/image/characters.png"
+                },
+                {
+                    "property": "og:url",
+                    "content": "https://celcom.herokuapp.com/characters"
+                }
+            ]
+        }
+    }
+]
