@@ -34,7 +34,7 @@ export class HttpMockRequestInterceptor implements HttpInterceptor {
     intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
        
         const resp = urls.find(el => el.url == request.urlWithParams);
-        console.info('Intercepted response:', resp);
+       // console.info('Intercepted response:', resp);
         if (resp) {
             console.info('Intercepted inside:', request.urlWithParams);
             return of(new HttpResponse({ status: 200, body: (resp?.json['default'] || resp?.json) }))

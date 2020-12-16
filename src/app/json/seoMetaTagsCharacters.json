@@ -14,11 +14,11 @@
                 { "name": "description", "content": "Characters | Game of Thrones Quotes." },
                 {
                     "property": "og:image",
-                    "content": "https://celcom.herokuapp.com/assets/image/characters.png"
+                    "content": "/assets/image/characters.png"
                 },
                 {
                     "property": "og:url",
-                    "content": "https://celcom.herokuapp.com/characters"
+                    "content": "/characters"
                 }
             ]
         }

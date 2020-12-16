@@ -14,11 +14,11 @@
                 { "name": "description", "content": "Books | Game of Thrones Quotes." },
                 {
                     "property": "og:image",
-                    "content": "https://celcom.herokuapp.com/assets/image/books.png"
+                    "content": "/assets/image/books.png"
                 },
                 {
                     "property": "og:url",
-                    "content": "https://celcom.herokuapp.com/books"
+                    "content": "/books"
                 }
             ]
         }

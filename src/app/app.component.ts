@@ -37,7 +37,7 @@ export class AppComponent implements OnDestroy{
     ).subscribe(data => {
       this.seoService.seoMetaTagsApi(this.router.url)
       .subscribe((response) => {
-        console.error(response);
+       // console.error(response);
         let seoData = response['seo'];
         this.seoService.updateTitle(seoData['title']);
         this.seoService.updateMetaTags(seoData['metaTags']);
