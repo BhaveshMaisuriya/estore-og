@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'http://estorecms-04.celcom.com.my',
+  apiUrl: 'https://estorecms-04.celcom.com.my',
   //host: 'https://celcom.herokuapp.com',
   host: 'http://localhost:4200',
 };
