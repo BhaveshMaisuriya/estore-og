@@ -9,20 +9,20 @@ import { delay } from 'rxjs/operators';
 import { BASE_URL } from '../services/seo.service';
 
 const urls = [
-    // {
-    //     url: `${BASE_URL}/home`,
-    //     json: seoMetaTagsHome
-    // },
     {
-        url: `${BASE_URL}/books`,
+        url: `${BASE_URL}/home`,
+        json: seoMetaTagsHome
+    },
+    {
+        url: `${BASE_URL}/xp-lite`,
         json: seoMetaTagsBooks
     },
     {
-        url: `${BASE_URL}/plans/mega`,
+        url: `${BASE_URL}/mega`,
         json: seoMetaTagsMega
     },
     {
-        url: `${BASE_URL}/characters`,
+        url: `${BASE_URL}/xpax`,
         json: seoMetaTagsCharacters
     },
 ];
@@ -32,14 +32,18 @@ export class HttpMockRequestInterceptor implements HttpInterceptor {
     constructor() {}
 
     intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-       
+        const req = request.clone({
+            setHeaders: {
+              'Cache-Control': 'no-cache',
+              Pragma: 'no-cache'
+            }
+          });
         const resp = urls.find(el => el.url == request.urlWithParams);
-       // console.info('Intercepted response:', resp);
         if (resp) {
             console.info('Intercepted inside:', request.urlWithParams);
             return of(new HttpResponse({ status: 200, body: (resp?.json['default'] || resp?.json) }))
                 .pipe(delay(+resp['delay'] || 0));
         }
-        return next.handle(request);
+        return next.handle(req);
     }
 }

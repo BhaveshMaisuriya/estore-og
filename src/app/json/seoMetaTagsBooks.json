@@ -8,10 +8,9 @@
                     "content": "Books | Celcom"
                 },
                 {
-                    "proprety": "og:description",
-                    "content": "Books! You have done the OG."
+                    "name": "description",
+                    "content": "Books | Game of Thrones Quotes."
                 },
-                { "name": "description", "content": "Books | Game of Thrones Quotes." },
                 {
                     "property": "og:image",
                     "content": "/assets/image/books.png"

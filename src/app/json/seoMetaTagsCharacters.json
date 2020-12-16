@@ -8,10 +8,9 @@
                     "content": "Characters | Celcom"
                 },
                 {
-                    "proprety": "og:description",
-                    "content": "Characters! You have done the OG."
+                    "name": "description",
+                    "content": "Characters | Game of Thrones Quotes."
                 },
-                { "name": "description", "content": "Characters | Game of Thrones Quotes." },
                 {
                     "property": "og:image",
                     "content": "/assets/image/characters.png"

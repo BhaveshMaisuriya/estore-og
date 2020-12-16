@@ -24,7 +24,7 @@ const routes: Routes = [
     // }
   },
   {
-    path: 'characters',
+    path: 'mega',
     loadChildren: () => import('./characters/characters.module').then(m => m.CharactersModule),
     // data: {
     //   seo: {
@@ -41,7 +41,7 @@ const routes: Routes = [
     // }
   },
   {
-    path: 'books',
+    path: 'xpax',
     loadChildren: () => import('./books/books.module').then(m => m.BooksModule),
     // data: {
     //   seo: {

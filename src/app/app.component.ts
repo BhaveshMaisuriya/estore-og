@@ -34,10 +34,10 @@ export class AppComponent implements OnDestroy{
       }),
       filter((route) => route.outlet === 'primary'),
       //mergeMap((route) => route.data),
-    ).subscribe(data => {
+    ).subscribe(() => {
       this.seoService.seoMetaTagsApi(this.router.url)
       .subscribe((response) => {
-       // console.error(response);
+        console.error(response);
         let seoData = response['seo'];
         this.seoService.updateTitle(seoData['title']);
         this.seoService.updateMetaTags(seoData['metaTags']);

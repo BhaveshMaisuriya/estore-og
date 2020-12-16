@@ -8,10 +8,9 @@
                     "content": "Plan Mega | Celcom"
                 },
                 {
-                    "proprety": "og:description",
-                    "content": "MEGA! You have done the OG."
+                    "name": "description",
+                    "content": "MEGA | Game of Thrones Quotes."
                 },
-                { "name": "description", "content": "MEGA | Game of Thrones Quotes." },
                 {
                     "property": "og:image",
                     "content": "/assets/image/characters.png"

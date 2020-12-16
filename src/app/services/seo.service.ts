@@ -20,17 +20,16 @@ export class SeoService {
   }
 
   updateMetaTags(metaTags: MetaDefinition[]){
+   debugger;
     metaTags.forEach( m => {
       if(m.property?.includes('og:image') || m.property?.includes('og:url')) 
-      {
-          m.content = environment.host + m.content;
-      }
-      this.meta.updateTag(m)
+        m.content =  environment.host + m.content ;
+        this.meta.updateTag(m)
     });
   }
 
   seoMetaTagsApi(url: string) {
-   // console.log('Complete API URL:'+ BASE_URL + url);
+    console.log('Complete API URL:'+ BASE_URL + url);
     return this.http.get<any>(BASE_URL + url)
     .pipe(map((response) => response[0]));
       
