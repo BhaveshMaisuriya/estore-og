@@ -6,23 +6,23 @@ import * as seoMetaTagsMega from '../json/seoMetaTagsMega.json';
 import * as seoMetaTagsCharacters from '../json/seoMetaTagsCharacters.json';
 import { Observable, of } from 'rxjs';
 import { delay } from 'rxjs/operators';
-import { environment } from 'src/environments/environment';
+import { BASE_URL } from '../services/seo.service';
 
 const urls = [
+    // {
+    //     url: `${BASE_URL}/home`,
+    //     json: seoMetaTagsHome
+    // },
     {
-        url: `${ environment.appUrl}/home`,
-        json: seoMetaTagsHome
-    },
-    {
-        url: `${environment.appUrl}/books`,
+        url: `${BASE_URL}/books`,
         json: seoMetaTagsBooks
     },
     {
-        url: `${environment.appUrl}/plans/mega`,
+        url: `${BASE_URL}/plans/mega`,
         json: seoMetaTagsMega
     },
     {
-        url: `${environment.appUrl}/characters`,
+        url: `${BASE_URL}/characters`,
         json: seoMetaTagsCharacters
     },
 ];

@@ -2,15 +2,12 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Title, Meta, MetaDefinition } from '@angular/platform-browser';
 import { map } from 'rxjs/operators';
-import { environment } from 'src/environments/environment';
 
+export const BASE_URL = 'https://estorecms-04.celcom.com.my/rest/V1/seodata';
 @Injectable({
   providedIn: 'root'
 })
 export class SeoService {
-  urls = {
-    seoMetaTags: `home`,
-  };
 
   constructor(
     private title: Title, 
@@ -26,9 +23,9 @@ export class SeoService {
   }
 
   seoMetaTagsApi(url: string) {
-    console.log('Current URL:'+ url);
-    return this.http
-      .get<any>(`${ environment.appUrl }${ url }`)
-      .pipe(map((response) => response[0]));
+    console.log('Complete API URL:'+ BASE_URL + url);
+    return this.http.get<any>(BASE_URL + url)
+    .pipe(map((response) => response[0]));
+      
   }
 }
