@@ -9,8 +9,9 @@
                 },
                 {
                     "proprety": "og:description",
-                    "content": "Cool! You have done the OG."
+                    "content": "MEGA! You have done the OG."
                 },
+                { "name": "description", "content": "MEGA | Game of Thrones Quotes." },
                 {
                     "property": "og:image",
                     "content": "https://celcom.herokuapp.com/assets/image/characters.png"
