@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { environment } from 'src/environments/environment';
+import { HomeComponent } from './home/home.component';
 
 
 const routes: Routes = [
@@ -55,7 +56,9 @@ const routes: Routes = [
     //     ]
     //   }
     // }
-  }];
+  },
+  { path: '**', redirectTo: 'home' },  // Wildcard route for a 404 page
+];
 @NgModule({
   imports: [RouterModule.forRoot(routes, { initialNavigation: 'enabled' })],
   exports: [RouterModule]

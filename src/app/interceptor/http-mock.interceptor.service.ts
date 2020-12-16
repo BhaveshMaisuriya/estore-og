@@ -6,24 +6,23 @@ import * as seoMetaTagsMega from '../json/seoMetaTagsMega.json';
 import * as seoMetaTagsCharacters from '../json/seoMetaTagsCharacters.json';
 import { Observable, of } from 'rxjs';
 import { delay } from 'rxjs/operators';
+import { environment } from 'src/environments/environment';
 
-//const estore_domain = 'https://celcom.heroku.com';
-const estore_domain = 'http://localhost:4000';
 const urls = [
     {
-        url: `${estore_domain}/home`,
+        url: `${ environment.appUrl}/home`,
         json: seoMetaTagsHome
     },
     {
-        url: `${estore_domain}/books`,
+        url: `${environment.appUrl}/books`,
         json: seoMetaTagsBooks
     },
     {
-        url: `${estore_domain}/plans/mega`,
+        url: `${environment.appUrl}/plans/mega`,
         json: seoMetaTagsMega
     },
     {
-        url: `${estore_domain}/characters`,
+        url: `${environment.appUrl}/characters`,
         json: seoMetaTagsCharacters
     },
 ];
@@ -35,10 +34,10 @@ export class HttpMockRequestInterceptor implements HttpInterceptor {
     intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
        
         const resp = urls.find(el => el.url == request.urlWithParams);
-        console.info('Intercepted', resp);
+        console.info('Intercepted response:', resp);
         if (resp) {
-            console.info('Intercepted', request.urlWithParams);
-            return of(new HttpResponse({ status: 200, body: (resp.json['default'] || resp.json) }))
+            console.info('Intercepted inside:', request.urlWithParams);
+            return of(new HttpResponse({ status: 200, body: (resp?.json['default'] || resp?.json) }))
                 .pipe(delay(+resp['delay'] || 0));
         }
         return next.handle(request);
