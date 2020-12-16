@@ -20,11 +20,10 @@ export class SeoService {
   }
 
   updateMetaTags(metaTags: MetaDefinition[]){
-   debugger;
     metaTags.forEach( m => {
       if(m.property?.includes('og:image') || m.property?.includes('og:url')) 
-        m.content =  environment.host + m.content ;
-        this.meta.updateTag(m)
+       { m.content =  environment.host + m.content; }
+        this.meta.updateTag(m);
     });
   }
 

@@ -9,22 +9,22 @@ import { delay } from 'rxjs/operators';
 import { BASE_URL } from '../services/seo.service';
 
 const urls = [
+    // {
+    //     url: `${BASE_URL}/home`,
+    //     json: seoMetaTagsHome
+    // },
     {
-        url: `${BASE_URL}/home`,
-        json: seoMetaTagsHome
-    },
-    {
-        url: `${BASE_URL}/xp-lite`,
+        url: `${BASE_URL}/books`,
         json: seoMetaTagsBooks
     },
-    {
-        url: `${BASE_URL}/mega`,
-        json: seoMetaTagsMega
-    },
-    {
-        url: `${BASE_URL}/xpax`,
-        json: seoMetaTagsCharacters
-    },
+    // {
+    //     url: `${BASE_URL}/mega`,
+    //     json: seoMetaTagsMega
+    // },
+    // {
+    //     url: `${BASE_URL}/xpax`,
+    //     json: seoMetaTagsCharacters
+    // },
 ];
 
 @Injectable()
