@@ -5,11 +5,15 @@
             "metaTags": [
                 {
                     "property": "og:title",
-                    "content": "Home | Celcom"
+                    "content": "Enjoy Free Shipping every day!| Celcom"
+                },
+                {
+                    "property": "og:description",
+                    "content": "Browse MEGA, XP Lite &amp; prepaid plans, EasyPhone or Device Bundles!"
                 },
                 {
                     "name": "description",
-                    "content": "Home | Game of Thrones Quotes."
+                    "content": "Browse MEGA, XP Lite &amp; prepaid plans, EasyPhone or Device Bundles!"
                 },
                 {
                     "property": "og:image",
