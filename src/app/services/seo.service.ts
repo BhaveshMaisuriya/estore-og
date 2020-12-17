@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Title, Meta, MetaDefinition } from '@angular/platform-browser';
 import { map } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
+import { ISeo } from '../models/book.model';
 
 export const BASE_URL = environment.Host + '/rest/V1/seodata';
 @Injectable({
@@ -28,13 +29,12 @@ export class SeoService {
   }
 
   seoMetaTagsApi(url: string): any {
-    this.http.get(BASE_URL + url)
-    .pipe(map((response) => response[0]))
-    .subscribe(data => {
+    this.http.get<ISeo[]>(BASE_URL + url)
+    .pipe(map((response:ISeo[]) => response[0].seo))
+    .subscribe((data) => {
         console.log(data);
-        let seoData = data['seo'];
-        this.updateTitle(seoData['title']);
-        this.updateMetaTags(seoData['metaTags']);
+        this.updateTitle(data.title);
+        this.updateMetaTags(data.metaTags);
       });
   }
 }

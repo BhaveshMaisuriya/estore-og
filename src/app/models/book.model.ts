@@ -1,3 +1,5 @@
+import { MetaDefinition } from '@angular/platform-browser';
+
 export interface Book{
     name: string;
     isbn: string;
@@ -6,4 +8,12 @@ export interface Book{
     country: string;
     mediaType: string;
     released: string;
+}
+
+export interface ISeo {
+    seo:IMetaTags;
+}
+export interface IMetaTags {
+    metaTags: MetaDefinition[];
+    title?:string;
 }
