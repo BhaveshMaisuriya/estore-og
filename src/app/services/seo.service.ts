@@ -4,7 +4,7 @@ import { Title, Meta, MetaDefinition } from '@angular/platform-browser';
 import { map } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
 
-export const BASE_URL = environment.apiUrl + '/rest/V1/seodata';
+export const BASE_URL = environment.Host + '/rest/V1/seodata';
 @Injectable({
   providedIn: 'root'
 })
@@ -21,16 +21,20 @@ export class SeoService {
 
   updateMetaTags(metaTags: MetaDefinition[]){
     metaTags.forEach( m => {
-      if(m.property?.includes('og:image') || m.property?.includes('og:url')) 
-       { m.content =  environment.host + m.content; }
-        this.meta.updateTag(m);
+      //if(m.property?.includes('og:image') || m.property?.includes('og:url')) 
+      //{ m.content = environment.host + m.content; }
+      this.meta.updateTag(m);
     });
   }
 
-  seoMetaTagsApi(url: string) {
-    console.log('Complete API URL:'+ BASE_URL + url);
-    return this.http.get<any>(BASE_URL + url)
-    .pipe(map((response) => response[0]));
-      
+  seoMetaTagsApi(url: string): any {
+    this.http.get(BASE_URL + url)
+    .pipe(map((response) => response[0]))
+    .subscribe(data => {
+        console.log(data);
+        let seoData = data['seo'];
+        this.updateTitle(seoData['title']);
+        this.updateMetaTags(seoData['metaTags']);
+      });
   }
 }

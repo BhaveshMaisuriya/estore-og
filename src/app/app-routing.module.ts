@@ -22,7 +22,7 @@ const routes: Routes = [
     // }
   },
   {
-    path: 'mega',
+    path: 'plans/mega',
     loadChildren: () => import('./characters/characters.module').then(m => m.CharactersModule),
     // data: {
     //   seo: {
@@ -39,7 +39,7 @@ const routes: Routes = [
     // }
   },
   {
-    path: 'xpax',
+    path: 'plans/xpax',
     loadChildren: () => import('./books/books.module').then(m => m.BooksModule),
     // data: {
     //   seo: {
@@ -56,10 +56,10 @@ const routes: Routes = [
     // }
   },
   {
-    path: 'books',
+    path: 'plans/xp-lite',
     loadChildren: () => import('./books/books.module').then(m => m.BooksModule),
   },
-  //{ path: '**', redirectTo: 'home' },  // Wildcard route for a 404 page
+  { path: '**', redirectTo: 'home' },  // Wildcard route for a 404 page
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes, { initialNavigation: 'enabled' })],

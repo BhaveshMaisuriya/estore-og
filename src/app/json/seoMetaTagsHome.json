@@ -13,11 +13,11 @@
                 },
                 {
                     "property": "og:image",
-                    "content": "/assets/image/homepage.png"
+                    "content": "https://celcom.herokuapp.com/assets/image/homepage.png"
                 },
                 {
                     "property": "og:url",
-                    "content": "/home"
+                    "content": "https://celcom.herokuapp.com/home"
                 }
             ]
         }

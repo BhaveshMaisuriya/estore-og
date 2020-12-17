@@ -9,9 +9,8 @@ import { Subscription } from 'rxjs';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnDestroy{
+export class AppComponent {
   title = 'got-prerender-demo';
-  seoApiSubscription: Subscription;
 
   constructor(
     private router: Router,
@@ -19,12 +18,9 @@ export class AppComponent implements OnDestroy{
     private seoService: SeoService){
 
   }
-  ngOnDestroy(): void {
-  // this.seoApiSubscription.unsubscribe();
-  }
 
   ngOnInit(): void {
-    // ? Adding OG Meta tags fetched from back-end
+
     this.router.events.pipe(
       filter(e => e instanceof NavigationEnd),
       map(e=> this.activatedRoute),
@@ -35,13 +31,7 @@ export class AppComponent implements OnDestroy{
       filter((route) => route.outlet === 'primary'),
       //mergeMap((route) => route.data),
     ).subscribe(() => {
-      this.seoService.seoMetaTagsApi(this.router.url)
-      .subscribe((response) => {
-        console.error(response);
-        let seoData = response['seo'];
-        this.seoService.updateTitle(seoData['title']);
-        this.seoService.updateMetaTags(seoData['metaTags']);
-      });
+      this.seoService.seoMetaTagsApi(this.router.url);
     });
     
   }

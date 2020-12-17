@@ -13,11 +13,11 @@
                 },
                 {
                     "property": "og:image",
-                    "content": "/assets/image/books.png"
+                    "content": "https://celcom.herokuapp.com/assets/image/books.png"
                 },
                 {
                     "property": "og:url",
-                    "content": "/books"
+                    "content": "https://celcom.herokuapp.com/plans/xpax"
                 }
             ]
         }
