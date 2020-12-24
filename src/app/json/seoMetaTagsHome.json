@@ -22,6 +22,30 @@
                 {
                     "property": "og:url",
                     "content": "https://celcom.herokuapp.com/home"
+                },
+                {
+                    "name": "twitter:card",
+                    "content": "summary_large_image"
+                },
+                {
+                    "property": "twitter:domain",
+                    "content": "celcom.herokuapp.com"
+                },
+                {
+                    "property": "twitter:url",
+                    "content": "https://celcom.herokuapp.com/home"
+                },
+                {
+                    "name": "twitter:title",
+                    "content": "Enjoy Free Shipping every day!| Celcom"
+                },
+                {
+                    "name": "twitter:description",
+                    "content": "Browse MEGA, XP Lite &amp; prepaid plans, EasyPhone or Device Bundles!"
+                },
+                {
+                    "name": "twitter:image",
+                    "content": "https://celcom.herokuapp.com/assets/image/homepage.png"
                 }
             ]
         }
